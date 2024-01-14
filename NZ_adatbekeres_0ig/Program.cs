@@ -25,20 +25,20 @@ namespace NZ_adatbekeres_0ig
                 Console.Write("Aktuális szám: ");
                 szamBevitel = Console.ReadLine();
 
-                // ha a bevitt érték nulla!
+                // ha a bevitt érték nulla! akkor break
                 if (szamBevitel == "0")
                 {
                     break;
                 }
 
-                // a megvitt szöveget tryparszoljuk és hozzáadjuk az "összeg" értékhez.
+                // a bevitt szöveget tryparszoljuk és hozzáadjuk az "összeg" értékhez.
                 if (double.TryParse(szamBevitel, out double aktualisSzam))
                 {
                     osszeg += aktualisSzam;
                 }
                 else
                 {
-                    Console.WriteLine("Hibás formátum! Kérlek adj meg érvényes számot.");
+                    Console.WriteLine("Nem jó a szám! Adj meg érvényes számot.");
                 }
 
                 Console.WriteLine($"eddigi számok összege: {osszeg}");
